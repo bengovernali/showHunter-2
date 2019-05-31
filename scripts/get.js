@@ -1,15 +1,14 @@
 "use strict"
 
-function get(url) {
-    return fetch(url)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            console.log(data);
-            return data;
-        })
-        .catch(function(error) {
-            return error;
-        });
+async function get(url) {
+    console.log(url);
+    try {
+        let response = await fetch(url);
+        let json = await response.json();
+        console.log(json);
+        return json;
+    } catch(err) {
+        return err.message;
+    }
 };
+
