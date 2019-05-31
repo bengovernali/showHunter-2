@@ -1,31 +1,20 @@
 "use strict"
 
-function pullEvents(artistArray) {
-    //loop through array of artists
-    const interval = 250;
+async function pullEvents(artistArray) {
     let promise = Promise.resolve();
-    artistArray.forEach(function(artist, index) {
-        //create unique url to fetch from ticketmaster
-        //fetch data from ticketmaster API for that specific artist
-        promise = promise.then(function() {
-            get(createUrl(artist))
-            .then((response) => {
-                console.log(response);
-                createEvent(response);
-            })
-            return new Promise(function(resolve) {
-                setTimeout(resolve, interval);
-            });
-        });
+    
+    artistArray.forEach(async function(artist, index) {
+        let url = await createUrl(artist);
+        let artistInfo = await get(url);
+        let event = await createEvent(artistInfo);
     });
 };
 
 function createUrl(item) {
-    //create url from info pulled from theaudiodb
-    //eventually add function to change postalCode/location and radius
+    //create url to lookup artist info from ticketmaster
     let url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${item}&city=atlanta&apikey=3FhkqehgsJxNsLTInDmAyq0Oo7Vzj5j5`;
     return url;
-}
+};
 
 function createEvent(item) {
     //create div element for event and embed in DOM
