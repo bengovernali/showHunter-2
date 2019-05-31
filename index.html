@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Show Hunter</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/Animations/search.css">
+        <link rel="stylesheet" href="styles/Animations/loading.css">
+    </head>
+    <body>
+        <section class="First">
+            <div class="Aligner">
+                <div class="logo">
+                    <img src="logo2.png" alt="logo">
+                </div>
+                <form id="inputForm" class="Search">
+                    <div class="container">
+                        <input id='input' type="text" placeholder="Search...">
+                        <div class="search"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id ="scroll" class="Second">
+            <div class ="loading-hide"></div>
+            <div class ="loading">
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+            </div>
+            <div id= "eventList" class="eventContainer"></div>
+        </section>
+        <script src='scripts/proxy.js'></script>
+        <script src='scripts/get.js'></script>
+        <script src='scripts/formatTime.js'></script>
+        <script src='scripts/formatDate.js'></script>
+        <script src='scripts/getSpotify.js'></script>
+        <script src='scripts/spotify.js'></script>
+        <script src='scripts/ticketmaster.js'></script>
+        <script src='scripts/main.js'></script>
+    </body>
+</html>

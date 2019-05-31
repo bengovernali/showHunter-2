@@ -1,0 +1,1 @@
+const proxy = 'http://my-little-cors-proxy.herokuapp.com/'

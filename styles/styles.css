@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: rgb(19, 19, 19);
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+}
+
+.logo{
+    margin-top: -90%;
+}
+
+img[src="logo2.png"]{
+    width: 20rem;
+}
+
+body {
+    margin: 0;
+    background-image: url(../background.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 350%;
+    background-position-x: 25%;
+    height: 100vh;
+    /* background-size: cover; */
+}
+
+.Aligner {
+    text-align: center;
+    /* color:#fff; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    vertical-align: center;
+}
+
+
+h1 {
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -30%;
+}
+
+section {
+    width: 100%;
+    padding: 0 4%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
+    
+    
+}
+
+.First {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.Second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(19, 19, 19);
+    position: relative;
+}
+
+.Search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.searchbar {
+    width: 425px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    border-color: #fff;
+    opacity: 0.25;
+}
+
+.eventContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 10px 8px 0 rgba(0,0,0,1);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: rgb(30,30,30);
+    list-style: none;
+    width: 280px;
+}
+
+img {
+    width: 260px;
+}
+
+@media screen and (min-width: 641px){
+
+    body {
+        background-size: 175%;
+        background-position-x: 10%; 
+    }
+    .logo{
+        margin-top: -60%;
+    }
+    
+    img[src="logo2.png"]{
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 821px){
+    body {
+        background-size: 125%;
+    }
+    .logo{
+        margin-top: -55%;
+    }
+    
+    img[src="logo2.png"]{
+        width: 35rem;
+    }
+} 
+
+
